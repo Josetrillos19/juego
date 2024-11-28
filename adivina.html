@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Adivina la Bandera</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Juego Interactivo</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="decodifica.html">Decodifica la Palabra</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>ADIVINA LA BANDERA</h1>
+        <div id="pantalla-inicial">
+            <p>¿A qué país pertenece la bandera?</p>
+            <button class="btn btn-success" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+        </div>
+        <div class="pantalla-juego" id="pantalla-juego" style="display: none;">
+            <img src="img/ad.svg" alt="" id="imgBandera">
+            <div class="opciones">
+                <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                    <div class="letra" id="l0">A</div>
+                    <div class="nombre" id="n0">OPCION A</div>
+                </div>
+                <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                    <div class="letra" id="l1">B</div>
+                    <div class="nombre" id="n1">OPCION B</div>
+                </div>
+                <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                    <div class="letra" id="l2">C</div>
+                    <div class="nombre" id="n2">OPCION C</div>
+                </div>
+            </div>
+        </div>
+        <div id="pantalla-final" style="display: none;">
+            <h2>CORRECTAS: <span id="numCorrectas">0</span></h2>
+            <h2>INCORRECTAS: <span id="numIncorrectas">0</span></h2>
+            <button class="btn btn-danger" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+        </div>
+    </div>
+
+    <footer class="text-center mt-4">Desarrollado por Código Web</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
